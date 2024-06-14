@@ -4,6 +4,8 @@ export class RomanNumerals {
 
     if(arabicNumber === 10) return 'X'
     if(arabicNumber === 20) return 'XX'
+    if(arabicNumber === 30) return 'XXX'
+
 
     return 'I'.repeat(arabicNumber)
   }
