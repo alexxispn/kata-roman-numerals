@@ -1,12 +1,5 @@
-import { describe, it, expect } from "vitest";
-
-class RomanNumerals {
-  fromArabic(number: number) {
-    if(number === 2) return "II"
-
-    return 'I'
-  }
-}
+import { describe, expect, it } from "vitest";
+import { RomanNumerals } from "./RomanNumerals.js";
 
 describe("Roman Numerals", () => {
   it("converts 1 to I", () => {
