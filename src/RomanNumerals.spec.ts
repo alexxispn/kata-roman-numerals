@@ -53,4 +53,8 @@ describe("Roman Numerals", () => {
   it("converts 300 to CCC", () => {
     expect(romanNumerals.fromArabic(300)).toBe("CCC")
   })
+
+  it("converts 4 to IV", () => {
+    expect(romanNumerals.fromArabic(4)).toBe("IV")
+  })
 })
