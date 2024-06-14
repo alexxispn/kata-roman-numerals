@@ -5,7 +5,6 @@ describe("Roman Numerals", () => {
 
   const romanNumerals = new RomanNumerals()
 
-
   describe('I cases', () => {
     it.each([
       [1, "I"],

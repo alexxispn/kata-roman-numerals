@@ -8,7 +8,7 @@ export class RomanNumerals {
     { roman: "I", arabic: 1 }
   ];
 
-  fromArabic(arabicNumber: number) {
+  fromArabicIterative(arabicNumber: number) {
     let remaining = arabicNumber;
     let romanNumber = "";
 
@@ -22,5 +22,14 @@ export class RomanNumerals {
     }
 
     return romanNumber;
+  }
+
+  fromArabic(arabicNumber: number): string {
+    for (const { roman, arabic } of RomanNumerals.arabicConversion) {
+      if (arabicNumber >= arabic) {
+        return roman + this.fromArabic(arabicNumber - arabic);
+      }
+    }
+    return "";
   }
 }
