@@ -41,4 +41,8 @@ describe("Roman Numerals", () => {
   it("converts 11 to XI", () => {
     expect(romanNumerals.fromArabic(11)).toBe("XI")
   })
+
+  it("converts 100 to C", () => {
+    expect(romanNumerals.fromArabic(100)).toBe("C")
+  })
 })
