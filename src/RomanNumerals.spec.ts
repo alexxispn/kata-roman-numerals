@@ -57,4 +57,8 @@ describe("Roman Numerals", () => {
   it("converts 4 to IV", () => {
     expect(romanNumerals.fromArabic(4)).toBe("IV")
   })
+
+  it("converts 9 to IX", () => {
+    expect(romanNumerals.fromArabic(9)).toBe("IX")
+  })
 })
