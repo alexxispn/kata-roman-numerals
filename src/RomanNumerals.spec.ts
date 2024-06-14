@@ -10,19 +10,4 @@ describe("Roman Numerals", () => {
     let romanNumerals = new RomanNumerals();
     expect(romanNumerals.fromArabic(arabicNumber)).toBe(romanNumber)
   })
-
-  it("converts 1 to I", () => {
-    let romanNumerals = new RomanNumerals();
-    expect(romanNumerals.fromArabic(1)).toBe("I");
-  });
-
-  it("converts 2 to II", () => {
-    let romanNumerals = new RomanNumerals();
-    expect(romanNumerals.fromArabic(2)).toBe("II");
-  });
-
-  it("converts 3 to III", () => {
-    let romanNumerals = new RomanNumerals();
-    expect(romanNumerals.fromArabic(3)).toBe("III");
-  });
-});
+})
