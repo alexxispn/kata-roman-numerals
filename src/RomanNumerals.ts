@@ -1,5 +1,5 @@
 export class RomanNumerals {
-  static romanArabicConversion = [
+  static arabicConversion = [
     { roman: "C", arabic: 100 },
     { roman: "X", arabic: 10 },
     { roman: "IX", arabic: 9 },
@@ -13,7 +13,7 @@ export class RomanNumerals {
     let romanNumber = "";
 
     while (remaining > 0) {
-      for (const { roman, arabic } of RomanNumerals.romanArabicConversion) {
+      for (const { roman, arabic } of RomanNumerals.arabicConversion) {
         if (remaining >= arabic) {
           remaining = remaining - arabic;
           romanNumber += roman;
