@@ -7,7 +7,12 @@ describe("Roman Numerals", () => {
     [2, "II"],
     [3, "III"],
   ])('converts %i to %s', (arabicNumber, romanNumber) => {
-    let romanNumerals = new RomanNumerals();
+    const romanNumerals = new RomanNumerals();
     expect(romanNumerals.fromArabic(arabicNumber)).toBe(romanNumber)
+  })
+
+  it("converts 5 to V", () => {
+    const romanNumerals = new RomanNumerals();
+    expect(romanNumerals.fromArabic(5)).toBe("V")
   })
 })
