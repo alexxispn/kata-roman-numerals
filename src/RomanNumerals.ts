@@ -3,6 +3,8 @@ export class RomanNumerals {
     if(arabicNumber === 5) return 'V'
     if(arabicNumber === 100) return 'C'
     if (arabicNumber === 200) return 'CC'
+    if (arabicNumber === 300) return 'CCC'
+
 
     const xAmountOfTimes = arabicNumber/ 10
     const xModule = arabicNumber%10
