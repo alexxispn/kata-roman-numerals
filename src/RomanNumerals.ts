@@ -9,7 +9,8 @@ export class RomanNumerals {
       const xModule = arabicNumber%10
       const currentSolution =   'X'.repeat(xAmountOfTimes)
       if(xModule === 4) return currentSolution + 'IV'
-      if (xModule > 5) return 'V' + 'I'.repeat(xModule-5)
+      if(xModule === 9) return currentSolution + 'IX'
+      if (xModule > 5) return currentSolution + 'V' + 'I'.repeat(xModule-5)
       return currentSolution + 'I'.repeat(xModule)
     }
 
