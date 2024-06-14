@@ -2,11 +2,8 @@ export class RomanNumerals {
   fromArabic(arabicNumber: number) {
     if(arabicNumber === 5) return 'V'
 
-    if(arabicNumber === 10) return 'X'
-    if(arabicNumber === 20) return 'XX'
-    if(arabicNumber === 30) return 'XXX'
-
-
+    const xAmountOfTimes = arabicNumber/ 10
+    if (xAmountOfTimes >= 1 ) return  'X'.repeat(xAmountOfTimes)
     return 'I'.repeat(arabicNumber)
   }
 }
