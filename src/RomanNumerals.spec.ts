@@ -11,4 +11,9 @@ describe("Roman Numerals", () => {
     let romanNumerals = new RomanNumerals();
     expect(romanNumerals.fromArabic(2)).toBe("II");
   });
+
+  it("converts 3 to III", () => {
+    let romanNumerals = new RomanNumerals();
+    expect(romanNumerals.fromArabic(3)).toBe("III");
+  });
 });
