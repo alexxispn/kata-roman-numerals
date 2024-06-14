@@ -1,10 +1,14 @@
-import { describe, it, expect } from "vitest"
-import { myFunction } from "./main.js"
+import { describe, it, expect } from "vitest";
 
-describe("Default test", () => {
-  it("should work", () => {
-    const result = myFunction()
+class RomanNumerals {
+  fromArabic(number: number) {
+    throw new Error("not implemented")
+  }
+}
 
-    expect(result).toBe(true)
-  })
-})
+describe("Roman Numerals", () => {
+  it("converts 1 to I", () => {
+    let romanNumerals = new RomanNumerals();
+    expect(romanNumerals.fromArabic(1)).toBe("I");
+  });
+});
