@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 
 class RomanNumerals {
   fromArabic(number: number) {
-    throw new Error("not implemented")
+    return 'I'
   }
 }
 
