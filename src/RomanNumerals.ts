@@ -1,26 +1,27 @@
 export class RomanNumerals {
-  fromArabic(arabicNumber: number) {
-    if(arabicNumber === 5) return 'V'
-    if(arabicNumber === 4) return 'IV'
-    if(arabicNumber === 9) return 'IX'
 
-    if (arabicNumber < 50) {
-      const xAmountOfTimes = arabicNumber/ 10
-      const xModule = arabicNumber%10
-      const currentSolution =   'X'.repeat(xAmountOfTimes)
-      if(xModule === 4) return currentSolution + 'IV'
-      if(xModule === 9) return currentSolution + 'IX'
-      if (xModule > 5) return currentSolution + 'V' + 'I'.repeat(xModule-5)
-      return currentSolution + 'I'.repeat(xModule)
+  fromArabic(arabicNumber: number) {
+    const romanNumbers = [
+      { roman: "C", arabic: 100 },
+      { roman: "X", arabic: 10 },
+      { roman: "IX", arabic: 9 },
+      { roman: "V", arabic: 5 },
+      { roman: "IV", arabic: 4 },
+      { roman: "I", arabic: 1 }
+    ];
+
+    let remaining = arabicNumber;
+    let romanNumber = "";
+
+    while (remaining > 0) {
+      for (const { roman, arabic } of romanNumbers) {
+        if (remaining >= arabic) {
+          remaining = remaining - arabic;
+          romanNumber += roman;
+        }
+      }
     }
 
-    const cAmountOfTimes = arabicNumber/ 100
-    if (cAmountOfTimes >= 1 ) return  'C'.repeat(cAmountOfTimes)
-
-    const xAmountOfTimes = arabicNumber/ 10
-    const xModule = arabicNumber%10
-    if (xAmountOfTimes >= 1 ) return  'X'.repeat(xAmountOfTimes) + 'I'.repeat(xModule)
-
-
+    return romanNumber;
   }
 }
