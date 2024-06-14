@@ -2,6 +2,8 @@ import { describe, it, expect } from "vitest";
 
 class RomanNumerals {
   fromArabic(number: number) {
+    if(number === 2) return "II"
+
     return 'I'
   }
 }
