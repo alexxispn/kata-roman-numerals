@@ -4,6 +4,11 @@ export class RomanNumerals {
 
     const xAmountOfTimes = arabicNumber/ 10
     if (xAmountOfTimes >= 1 ) return  'X'.repeat(xAmountOfTimes)
+
+    const vAmountOfTimes = arabicNumber / 5
+    const module = arabicNumber % 5
+    if (vAmountOfTimes >= 1) return 'V' + 'I'.repeat(vAmountOfTimes)
+
     return 'I'.repeat(arabicNumber)
   }
 }
