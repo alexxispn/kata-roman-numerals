@@ -25,4 +25,9 @@ describe("Roman Numerals", () => {
     const romanNumerals = new RomanNumerals();
     expect(romanNumerals.fromArabic(20)).toBe("XX")
   })
+
+  it("converts 30 to XXX", () => {
+    const romanNumerals = new RomanNumerals();
+    expect(romanNumerals.fromArabic(30)).toBe("XXX")
+  })
 })
