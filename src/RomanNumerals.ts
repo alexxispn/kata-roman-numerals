@@ -5,6 +5,10 @@ export class RomanNumerals {
     if (arabicNumber === 200) return 'CC'
     if (arabicNumber === 300) return 'CCC'
 
+    const cAmountOfTimes = arabicNumber/ 100
+    if (cAmountOfTimes >= 1 ) return  'C'.repeat(cAmountOfTimes)
+
+
 
     const xAmountOfTimes = arabicNumber/ 10
     const xModule = arabicNumber%10
