@@ -28,4 +28,9 @@ describe("Roman Numerals", () => {
     const romanNumerals = new RomanNumerals();
     expect(romanNumerals.fromArabic(5)).toBe("V")
   })
+
+  it("converts 6 to VI", () => {
+    const romanNumerals = new RomanNumerals();
+    expect(romanNumerals.fromArabic(6)).toBe("VI")
+  })
 })
